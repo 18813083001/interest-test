@@ -22,7 +22,6 @@ public class DeadLockTest {
             System.out.println("A");
 
             Future future = executor.submit(new Runnable() {
-                @Override
                 public void run() {
                     synchronized (DeadLockTest.class){
                         System.out.println("B");
